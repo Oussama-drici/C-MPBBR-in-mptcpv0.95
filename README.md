@@ -19,9 +19,9 @@ Line 254,255: size of segments
 
 ==>
     
-bytes = min_t(u32, sk->sk_pacing_rate >> sk->sk_pacing_shift,GSO_MAX_SIZE - 1 - MAX_TCP_HEADER);
-segs = max_t(u32, bytes / tp->mss_cache, (sk->sk_pacing_rate) < (mpbbr_min_tso_rate >> 3) ? 1 : 2);
-mpbbr->tso_segs_goal = min(segs,0x7FU);
+	bytes = min_t(u32, sk->sk_pacing_rate >> sk->sk_pacing_shift,GSO_MAX_SIZE - 1 - MAX_TCP_HEADER);
+	segs = max_t(u32, bytes / tp->mss_cache, (sk->sk_pacing_rate) < (mpbbr_min_tso_rate >> 3) ? 1 : 2);
+	mpbbr->tso_segs_goal = min(segs,0x7FU);
 
 Line 366,446: Boucle for the sub flows in the MPTCP
     
