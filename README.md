@@ -36,7 +36,7 @@ Line 366,446: Boucle for the sub flows in the MPTCP
      
     
     
-Line 595	the difference in time
+Line 595: the difference in time
     
     skb_mstamp_us_delta 
     
@@ -44,7 +44,7 @@ Line 595	the difference in time
     
     tcp_stamp_us_delta
 
-Line 681 	Function of transforming the time to us.
+Line 681: Function of transforming the time to us.
     
     mpbbr->lt_last_stamp = tp->delivered_mstamp.stamp_jiffies 
     
@@ -52,7 +52,7 @@ Line 681 	Function of transforming the time to us.
     
     mpbbr->lt_last_stamp =div_u64(tp->delivered_mstamp, USEC_PER_MSEC);
 
-Line 787	The time of delivering the packets to calculated delivery rate
+Line 787: The time of delivering the packets to calculated delivery rate
     
     t = (s32) (tp->delivered_mstamp.stamp_jiffies - mpbbr->lt_last_stamp)  
     
