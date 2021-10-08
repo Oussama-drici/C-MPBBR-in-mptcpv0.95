@@ -62,6 +62,15 @@ Line 787: The time of delivering the packets to calculated delivery rate
 
 Also the function mpbbr_get_info() is ignored because we does not need the information of the variables utilized in C-MPBBR and it’s replace by 0 value.
 
+#Instructions:
+
+How to Run:
+
+Just compile and install is as a module. Change the default Congestion Algorithm to "C-MPBBR"
+
+Above development was based on the MPTCP v0.95.0 deployed in Linux kernel version of v4.19.206 
+
+
 Regards,
 
 Computer Systems Enginner Drici Oussama.
