@@ -8,7 +8,7 @@ Line 66:
 
     struct skb_mstamp cycle_mstamp 
     
-    ==> 
+==> 
     
     u64 cycle_mstamp;
 
@@ -26,22 +26,21 @@ Line 254,255: size of segments
 Line 366,446: Boucle for the sub flows in the MPTCP
     
     struct sock *sub_sk;			   
+    mptcp_for_each_sk(mpcb, sub_sk)
 
 ==> 
 
     struct mptcp_tcp_sock *mptcp;
-    
-    mptcp_for_each_sk(mpcb, sub_sk) 
-    
-    ==>   
-    
     mptcp_for_each_sub(mpcb, mptcp)
 
+     
+    
+    
 Line 595	the difference in time
     
     skb_mstamp_us_delta 
     
-    ==> 
+==> 
     
     tcp_stamp_us_delta
 
@@ -49,7 +48,7 @@ Line 681 	Function of transforming the time to us.
     
     mpbbr->lt_last_stamp = tp->delivered_mstamp.stamp_jiffies 
     
-    ==>  	
+==>  	
     
     mpbbr->lt_last_stamp =div_u64(tp->delivered_mstamp, USEC_PER_MSEC);
 
@@ -57,7 +56,7 @@ Line 787	The time of delivering the packets to calculated delivery rate
     
     t = (s32) (tp->delivered_mstamp.stamp_jiffies - mpbbr->lt_last_stamp)  
     
-    ==> 
+==> 
     
     t = (s32)( div_u64(tp->delivered_mstamp, USEC_PER_MSEC) - mpbbr->lt_last_stamp);
 
