@@ -5,7 +5,7 @@ did the following adjustments in the code C that was developed in the previous M
 v0.93.0:
 
 Line 66:
-    struct skb_mstamp cycle_mstamp u64 cycle_mstamp;
+    struct skb_mstamp cycle_mstamp ==> u64 cycle_mstamp;
 
 Line 254,255: size of segments
 	  min_segs = sk->sk_pacing_rate < (mpbbr_min_tso_rate >> 3) ? 1 : 2;
